@@ -1,0 +1,21 @@
+name: pce_validator_tests
+
+on:
+  workflow_dispatch:
+
+jobs:
+  pce_validator_test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v1
+
+      - name: Install Package
+        run: |
+          python3 -m pip install --upgrade pip
+          python3 -m pip install .
+          echo "Python version: $(python3 --version)"
+      - name: List all Python packages
+        run: |
+          python3 -m pip install pip list
