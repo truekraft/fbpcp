@@ -1,6 +1,10 @@
 name: pce_validator_tests
 
 on:
+  push:
+    branches: [ github-actions-test ]
+  pull_request:
+    branches: [ github-actions-test ]
   workflow_dispatch:
 
 jobs:
