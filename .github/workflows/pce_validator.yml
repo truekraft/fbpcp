@@ -22,4 +22,4 @@ jobs:
           echo "Python version: $(python3 --version)"
       - name: List all Python packages
         run: |
-          python3 -m pip install pip list
+          python3 -m pip list
